@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8afc4">
+<meta name="description" content="Uma homenagem especial para Maria Eduarda, 29 de setembro de 2026.">
+<title>Maria Eduarda | Feliz Aniversário ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff8fb;
+  --bg2:#fff0f5;
+  --pink:#e85d8f;
+  --pink2:#f8afc4;
+  --lilac:#e8d9ff;
+  --peach:#ffdcca;
+  --ink:#3a2933;
+  --muted:#765f6a;
+  --white:#fff;
+  --line:rgba(110,65,84,.12);
+  --shadow:0 24px 70px rgba(145,75,104,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"DM Sans",sans-serif;color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 15%,rgba(248,175,196,.25),transparent 28%),
+    radial-gradient(circle at 90% 25%,rgba(232,217,255,.34),transparent 30%),
+    linear-gradient(180deg,var(--bg),#fff 45%,var(--bg2));
+  overflow-x:hidden;
+}
+body.modal-open{overflow:hidden}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.hero{
+  min-height:100svh;position:relative;display:grid;place-items:center;
+  padding:50px 22px;overflow:hidden;
+}
+.hero:before{
+  content:"";position:absolute;width:720px;height:720px;border-radius:50%;
+  background:radial-gradient(circle,rgba(248,175,196,.42),rgba(232,217,255,.22) 42%,transparent 68%);
+  filter:blur(12px);animation:pulse 7s ease-in-out infinite;
+}
+.orbit{position:absolute;border:1px solid rgba(232,93,143,.12);border-radius:50%;width:560px;height:560px;animation:spin 35s linear infinite}
+.orbit:after{content:"";position:absolute;top:6%;right:8%;width:8px;height:8px;border-radius:50%;background:#f8afc4;box-shadow:0 0 22px 8px rgba(248,175,196,.5)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:1050px}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;padding:9px 15px;border:1px solid var(--line);
+  background:rgba(255,255,255,.62);backdrop-filter:blur(14px);border-radius:999px;
+  color:var(--pink);font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+}
+.kicker span{width:7px;height:7px;background:var(--pink);border-radius:50%;box-shadow:0 0 15px rgba(232,93,143,.7)}
+.hero h1{
+  margin:25px 0 5px;font-family:"Cormorant Garamond",serif;font-size:clamp(4rem,11vw,9.7rem);
+  line-height:.8;letter-spacing:.035em;font-weight:700;
+  background:linear-gradient(100deg,#9e476b 0%,#e85d8f 35%,#8e6cb5 70%,#9e476b 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 10px 25px rgba(232,93,143,.15));animation:titleGlow 4s ease-in-out infinite;
+}
+.signature{font-family:"Great Vibes",cursive;color:#9c607a;font-size:clamp(2rem,4vw,3.2rem)}
+.date{margin:22px 0 20px;font-size:.92rem;letter-spacing:.3em;text-transform:uppercase;color:#8e6b79}
+.hero p{max-width:740px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,2vw,1.18rem);line-height:1.9}
+.scroll{margin-top:35px;display:inline-flex;flex-direction:column;align-items:center;gap:8px;color:#9d7584;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.scroll i{width:1px;height:45px;background:linear-gradient(var(--pink),transparent);display:block}
+
+.floating-heart{position:fixed;z-index:5;pointer-events:none;bottom:-30px;color:rgba(232,93,143,.52);animation:floatUp linear forwards}
+.spark{position:fixed;z-index:1;width:4px;height:4px;border-radius:50%;background:#fff;box-shadow:0 0 13px 3px rgba(255,255,255,.9);pointer-events:none;animation:sparkle 2.5s ease-in-out infinite}
+
+section{position:relative;padding:110px 22px}
+.container{width:min(1120px,100%);margin:auto}
+.section-head{text-align:center;max-width:750px;margin:0 auto 55px}
+.eyebrow{font-family:"Great Vibes",cursive;font-size:2rem;color:var(--pink)}
+h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2.7rem,5vw,4.6rem);line-height:.95;margin:8px 0 20px}
+.section-head p,.text-block p{color:var(--muted);line-height:1.9;font-size:1.05rem}
+
+.intro{background:rgba(255,255,255,.45)}
+.intro-card{
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+  background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:38px;padding:50px;box-shadow:var(--shadow);
+  backdrop-filter:blur(15px)
+}
+.flower{font-size:5rem;margin-bottom:15px;filter:drop-shadow(0 10px 20px rgba(232,93,143,.2))}
+.text-block h3{font-family:"Cormorant Garamond",serif;font-size:2.8rem;margin-bottom:15px}
+.quote{
+  padding:30px;border-radius:28px;background:linear-gradient(135deg,#fff,#fff0f5);
+  border:1px solid rgba(232,93,143,.12);font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1.2;color:#744052
+}
+.quote small{display:block;font-family:"DM Sans",sans-serif;font-size:.8rem;color:#9a7481;margin-top:18px;letter-spacing:.08em;text-transform:uppercase}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:28px;padding:30px;
+  box-shadow:0 12px 35px rgba(126,67,92,.07);transition:.45s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover{transform:translateY(-8px) rotate(.4deg);box-shadow:0 25px 55px rgba(126,67,92,.13)}
+.card .emoji{font-size:2rem;margin-bottom:20px}.card h3{font-size:1.05rem}.card p{margin-top:8px;color:var(--muted);line-height:1.7}
+
+.emotional{background:linear-gradient(135deg,rgba(255,228,236,.7),rgba(232,217,255,.5))}
+.emotional-inner{text-align:center;max-width:900px;margin:auto}
+.big-quote{font-family:"Cormorant Garamond",serif;font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.05;color:#633b4d}
+.big-quote em{font-family:"Great Vibes",cursive;color:var(--pink);font-style:normal}
+.emotional-inner p{max-width:650px;margin:30px auto 0;color:var(--muted);line-height:1.9}
+
+.letter-wrap{display:grid;place-items:center}
+.letter{
+  max-width:820px;padding:55px;border-radius:10px 38px 38px 10px;
+  background:linear-gradient(90deg,#fffaf4,#fff);box-shadow:var(--shadow);border:1px solid rgba(135,89,68,.12);
+  position:relative;
+}
+.letter:before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:linear-gradient(#f8afc4,#e8d9ff);border-radius:10px}
+.letter .hello{font-family:"Great Vibes",cursive;font-size:3rem;color:var(--pink);margin-bottom:18px}
+.letter p{color:#67545d;line-height:2;margin:0 0 15px}
+.letter .sign{font-family:"Great Vibes",cursive;color:#8f5870;font-size:2.2rem;margin-top:25px}
+
+.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.media{
+  overflow:hidden;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:0 15px 40px rgba(126,67,92,.1);
+  cursor:pointer;transition:.4s;position:relative
+}
+.media:hover{transform:translateY(-7px)}
+.media img{display:block;width:100%;height:380px;object-fit:cover;transition:.6s}
+.media:hover img{transform:scale(1.045)}
+.media figcaption{padding:18px 20px;color:#725966;font-size:.9rem}
+.media.video{grid-column:span 1}
+.media video{width:100%;height:380px;object-fit:cover;display:block;background:#2d2027}
+.media .tag{position:absolute;top:15px;left:15px;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);font-size:.75rem;color:#8a5069}
+
+.wishes{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:900px;margin:auto}
+.wish{padding:14px 19px;border-radius:999px;background:rgba(255,255,255,.8);border:1px solid var(--line);box-shadow:0 8px 22px rgba(126,67,92,.06);color:#684c59;animation:softFloat 4s ease-in-out infinite}
+.wish:nth-child(2n){animation-delay:.6s}.wish:nth-child(3n){animation-delay:1.2s}
+
+.cta{text-align:center;padding-top:60px}
+.cta-btn{
+  border:0;cursor:pointer;padding:17px 28px;border-radius:999px;color:white;background:linear-gradient(100deg,#e85d8f,#b875c7);
+  box-shadow:0 15px 35px rgba(194,91,137,.25);font-weight:700;transition:.3s
+}
+.cta-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 42px rgba(194,91,137,.32)}
+footer{text-align:center;padding:60px 22px 75px;color:#8b6a78}
+footer .heart{display:inline-block;animation:heartbeat 1.2s infinite}
+footer small{display:block;margin-top:8px;letter-spacing:.08em}
+
+.modal{position:fixed;inset:0;background:rgba(48,25,37,.48);backdrop-filter:blur(10px);display:none;place-items:center;padding:22px;z-index:20}
+.modal.open{display:grid}
+.modal-card{max-width:650px;background:#fffafc;border-radius:35px;padding:48px;box-shadow:0 35px 100px rgba(35,15,25,.28);position:relative;text-align:center}
+.close{position:absolute;right:17px;top:17px;width:38px;height:38px;border:0;border-radius:50%;background:#ffe4ec;color:#9e476b;cursor:pointer;font-size:1.2rem}
+.modal-card .mini-heart{font-size:3rem}.modal-card h3{font-family:"Cormorant Garamond",serif;font-size:3rem;margin:12px 0}
+.modal-card p{color:var(--muted);line-height:1.9}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@keyframes pulse{50%{transform:scale(1.08);opacity:.8}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes titleGlow{50%{filter:drop-shadow(0 0 28px rgba(232,93,143,.25))}}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+@keyframes sparkle{0%,100%{opacity:.1;transform:scale(.7)}50%{opacity:1;transform:scale(1.4)}}
+@keyframes softFloat{50%{transform:translateY(-5px)}}
+@keyframes heartbeat{50%{transform:scale(1.25)}}
+
+@media(max-width:850px){
+  .intro-card{grid-template-columns:1fr;padding:32px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .media-grid{grid-template-columns:1fr 1fr}
+  .media img,.media video{height:330px}
+  .media.video{grid-column:span 1}
+}
+@media(max-width:560px){
+  section{padding:80px 17px}
+  .hero{min-height:95svh;padding:30px 17px}
+  .hero h1{font-size:clamp(3.3rem,17vw,5.2rem);line-height:.86}
+  .orbit{width:330px;height:330px}
+  .cards,.media-grid{grid-template-columns:1fr}
+  .media.video{grid-column:auto}
+  .media img,.media video{height:auto;aspect-ratio:4/5}
+  .letter{padding:38px 28px}
+  .quote{font-size:1.65rem}
+  .modal-card{padding:38px 25px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="orbit"></div>
+  <div class="hero-content">
+    <div class="kicker"><span></span> 29 de setembro de 2026 <span></span></div>
+    <h1>MARIA<br>EDUARDA</h1>
+    <div class="signature">para uma pessoa especial</div>
+    <div class="date">Feliz aniversário · 29.09.2026</div>
+    <p>Hoje é o seu dia, Maria Eduarda. E eu queria encontrar uma forma diferente de te lembrar o quanto você é incrível para mim.</p>
+    <div class="scroll">deslize para continuar<i></i></div>
+  </div>
+</header>
+
+<main>
+<section class="intro">
+  <div class="container">
+    <div class="intro-card reveal">
+      <div class="text-block">
+        <div class="flower">🌷</div>
+        <h3>Uma pequena surpresa feita para você</h3>
+        <p>Esse site é uma pequena demonstração de todo o amor, carinho e admiração que tenho por você. Talvez eu nunca consiga colocar em palavras tudo o que você representa para mim, mas fiz cada detalhe pensando em você.</p>
+      </div>
+      <div class="quote">“Que bom que o mundo teve você em 29 de setembro.”<small>um desejo para o seu novo ciclo</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">para você</div>
+      <h2>Hoje o mundo ficou um pouquinho mais bonito</h2>
+      <p>Porque hoje é o dia de uma pessoa especial. Uma pessoa que merece receber todo o carinho, toda a felicidade e todos os momentos bons que a vida puder oferecer.</p>
+    </div>
+    <div class="text-block reveal" style="max-width:800px;margin:auto;text-align:center">
+      <p>Maria, você é uma pessoa incrível. Seu jeito, sua presença e a forma como você faz os momentos se tornarem especiais fazem você ter um lugar único na minha vida.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">um pouquinho</div>
+      <h2>Do que você é para mim</h2>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><div class="emoji">✨</div><h3>Uma pessoa incrível</h3><p>Daquelas que deixam uma lembrança boa por onde passam.</p></article>
+      <article class="card reveal"><div class="emoji">💗</div><h3>Uma pessoa que eu admiro</h3><p>Por tudo que você é e pela pessoa que continua se tornando.</p></article>
+      <article class="card reveal"><div class="emoji">🌷</div><h3>Uma presença que faz diferença</h3><p>Seu jeito transforma momentos simples em lembranças especiais.</p></article>
+      <article class="card reveal"><div class="emoji">🫶</div><h3>Alguém que merece toda a felicidade</h3><p>Que seu novo ciclo traga motivos sinceros para sorrir.</p></article>
+      <article class="card reveal"><div class="emoji">💫</div><h3>Uma pessoa impossível de esquecer</h3><p>Algumas pessoas simplesmente ocupam um espaço especial.</p></article>
+      <article class="card reveal"><div class="emoji">❤️</div><h3>Alguém muito especial para mim</h3><p>E hoje eu queria que você soubesse disso.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="emotional">
+  <div class="container emotional-inner reveal">
+    <div class="eyebrow">se eu pudesse</div>
+    <div class="big-quote">“Se eu pudesse te dar alguma coisa hoje, eu te daria a oportunidade de <em>enxergar você mesma pelos meus olhos.</em>”</div>
+    <p>Talvez assim você entendesse o quanto é especial, o quanto é admirada e o quanto sua existência significa para mim.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">com carinho</div>
+      <h2>Para Maria</h2>
+    </div>
+    <div class="letter-wrap">
+      <article class="letter reveal">
+        <div class="hello">Maria Eduarda,</div>
+        <p>Hoje é o seu aniversário, mas quem ganhou um presente foi quem teve a oportunidade de conhecer você.</p>
+        <p>Eu queria que você soubesse o quanto você é importante para mim. Às vezes faltam palavras para explicar o carinho que sinto, então resolvi transformar um pouco desse sentimento em algo que você pudesse guardar.</p>
+        <p>Cada detalhe desse site foi pensado para você.</p>
+        <p>Não é apenas uma página de aniversário. É uma pequena demonstração do amor, carinho e admiração que tenho por você.</p>
+        <p>Espero que seu novo ciclo seja cheio de momentos felizes, pessoas que te façam bem, sonhos realizados e motivos para sorrir.</p>
+        <p>Que você nunca se esqueça do quanto é incrível.</p>
+        <p><strong>Feliz aniversário, Maria Eduarda. ❤️</strong></p>
+        <div class="sign">com carinho, sempre</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">memórias</div>
+      <h2>Um pouquinho de você</h2>
+      <p>Alguns registros para deixar essa homenagem ainda mais pessoal.</p>
+    </div>
+    <div class="media-grid">
+      <figure class="media reveal"><span class="tag">foto</span><img src="assets/maria-01.jpeg" alt="Maria Eduarda"></figure>
+      <figure class="media reveal"><span class="tag">foto</span><img src="assets/maria-02.jpeg" alt="Maria Eduarda em um momento especial"></figure>
+      <figure class="media reveal"><span class="tag">foto</span><img src="assets/maria-03.jpeg" alt="Maria Eduarda"></figure>
+      <figure class="media video reveal"><span class="tag">vídeo</span><video controls playsinline preload="metadata" src="assets/maria-video-01.mp4"></video><figcaption>Um momento para guardar. ❤️</figcaption></figure>
+      <figure class="media video reveal"><span class="tag">vídeo</span><video controls playsinline preload="metadata" src="assets/maria-video-02.mp4"></video><figcaption>Mais uma lembrança especial. 🌷</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">para o novo ciclo</div>
+      <h2>Desejo para você</h2>
+    </div>
+    <div class="wishes">
+      <span class="wish">Mais sorrisos. 😊</span>
+      <span class="wish">Mais sonhos realizados. ✨</span>
+      <span class="wish">Mais momentos inesquecíveis. 💫</span>
+      <span class="wish">Mais pessoas boas ao seu lado. 🫶</span>
+      <span class="wish">Mais motivos para comemorar. 🎂</span>
+      <span class="wish">E muita felicidade. ❤️</span>
+    </div>
+    <div class="cta reveal">
+      <button class="cta-btn" id="openModal">💌 Tenho uma mensagem para você</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  Feito com muito carinho para Maria Eduarda <span class="heart">❤️</span>
+  <small>29 de setembro de 2026</small>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="close" id="closeModal" aria-label="Fechar">×</button>
+    <div class="mini-heart">💌</div>
+    <h3>Uma última coisa...</h3>
+    <p>Se você chegou até aqui, espero que tenha percebido pelo menos um pouquinho do quanto você é especial para mim. Feliz aniversário, Maria Eduarda. Que hoje seja apenas o começo de um ciclo maravilhoso. ❤️</p>
+  </div>
+</div>
+
+<script>
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+const modal=document.getElementById("modal");
+const openModal=document.getElementById("openModal");
+const closeModal=document.getElementById("closeModal");
+openModal.addEventListener("click",()=>{
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  confetti();
+});
+function close(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true")}
+closeModal.addEventListener("click",close);
+modal.addEventListener("click",e=>{if(e.target===modal)close()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+
+function makeHeart(){
+  const h=document.createElement("div");
+  h.className="floating-heart";
+  h.textContent=["♡","♥","❤","💕"][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(12+Math.random()*20)+"px";
+  h.style.animationDuration=(8+Math.random()*7)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),16000);
+}
+setInterval(makeHeart,1700);
+
+for(let i=0;i<18;i++){
+  const s=document.createElement("div");
+  s.className="spark";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*100+"vh";
+  s.style.animationDelay=(Math.random()*2.5)+"s";
+  document.body.appendChild(s);
+}
+
+function confetti(){
+  const symbols=["❤","✦","✿","♡","✨"];
+  for(let i=0;i<34;i++){
+    const el=document.createElement("div");
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.position="fixed";
+    el.style.left=(45+Math.random()*10)+"vw";
+    el.style.top="55vh";
+    el.style.zIndex="30";
+    el.style.pointerEvents="none";
+    el.style.fontSize=(12+Math.random()*18)+"px";
+    el.style.color=["#e85d8f","#f8afc4","#b875c7","#f2a65a"][Math.floor(Math.random()*4)];
+    const x=(Math.random()-.5)*650;
+    const y=-(120+Math.random()*500);
+    el.animate([
+      {transform:"translate(0,0) scale(.5)",opacity:1},
+      {transform:`translate(${x}px,${y}px) rotate(${Math.random()*720-360}deg) scale(1.1)`,opacity:0}
+    ],{duration:1200+Math.random()*1000,easing:"cubic-bezier(.2,.7,.2,1)"}).onfinish=()=>el.remove();
+    document.body.appendChild(el);
+  }
+}
+</script>
+</body>
+</html>
